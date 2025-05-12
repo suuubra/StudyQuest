@@ -18,7 +18,6 @@ namespace StudyQuest
         {
             MessageBox.Show("YOU CLICKED ON THIS!!");
             
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
         }
         
     }

@@ -10,5 +10,8 @@ namespace StudyQuest
 //User statistics, information, etc.
     internal class Core
     {
+        
+
+
     }
 }
