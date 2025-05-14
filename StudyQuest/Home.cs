@@ -14,7 +14,7 @@ namespace StudyQuest
     public partial class Home : Form
     {
         List<Quiz> chemQ = new List<Quiz> ();
-        
+        Quiz chemistry = new Quiz();
         public Home()
         {
             InitializeComponent();
@@ -31,6 +31,7 @@ namespace StudyQuest
                 using (StreamReader reader = new StreamReader(jsonFilePath))
                 {
                     reader.ReadToEnd();
+                    
                 }
             } else
             {
