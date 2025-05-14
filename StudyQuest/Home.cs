@@ -26,18 +26,15 @@ namespace StudyQuest
         {
 
             string jsonFilePath = Path.Combine(Application.StartupPath, "ChemistryQuiz.json");
-            if(File.Exists(jsonFilePath))
-            {
-                using (StreamReader reader = new StreamReader(jsonFilePath))
-                {
-                    reader.ReadToEnd();
-                    
-                }
-            } else
-            {
-                MessageBox.Show("The Chemistry Quizzes have not loaded in.");
+            using (StreamReader reader = new StreamReader(jsonFilePath)) {
+                string json = reader.ReadToEnd();
+#pragma warning disable CS8601 // Possible null reference assignment.
+                chemistry = JsonConvert.DeserializeObject<Quiz.AddQuiz>(json);
+#pragma warning restore CS8601 // Possible null reference assignment.
+                Console.WriteLine($"{chemistry.Name}");
+
+
             }
-        }
 
 
      

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 namespace StudyQuest
 {
 //Quiz panel
@@ -34,11 +34,32 @@ namespace StudyQuest
             Question_Type = question_Type;
             Question_Choices = question_Choices;
         }*/
-        public void AddQuiz(string quiz_Name, string quiz_TotalPoints, string quiz_TotalNoQuestions)
-        {
-            Quiz_Name = quiz_Name;
-            Quiz_TotalPoints = quiz_TotalPoints;
-            Quiz_TotalNoQuestions = quiz_TotalNoQuestions;
+        public class AddQuiz {
+            [JsonProperty("Version")]
+            public string Version { get; set; }
+            [JsonProperty("Name")] 
+            public string Name { get; set; }
+
+            [JsonProperty("Quizzes")]
+            public List<Questions> question { get; set; }
+
         }
+        public class Questions
+        {
+            [JsonProperty("Id")]
+            public string Id { get; set; }
+            [JsonProperty("Points")]
+            public int Points { get; set; }
+            [JsonProperty("Question")]
+            public string Question { get; set; }
+            [JsonProperty("Answer")]
+            public string Answer { get; set; }
+            [JsonProperty("Type")] 
+            public string Type { get; set; }
+            [JsonProperty("Choices")]
+            public string Choices { get; set; }
+        }
+
     }
+
 }
