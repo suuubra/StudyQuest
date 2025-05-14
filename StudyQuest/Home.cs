@@ -12,10 +12,8 @@ namespace StudyQuest
 {//test
     public partial class Home : Form
     {
-        const string THERMO_QUIZ = @"thermoquiz.csv";
-        const string ORGANIC_QUIZ = @"\organicquiz.csv";
-        const string EQUILIBRIUM_QUIZ = @"\equilibriumquiz.csv";
-
+        List<Quiz> chemQ = new List<Quiz> ();
+        
         public Home()
         {
             InitializeComponent();
@@ -25,16 +23,19 @@ namespace StudyQuest
 
         public void ImportChemistryQuiz()
         {
-            if (File.Exists(THERMO_QUIZ)) {
 
-                MessageBox.Show("HELLO");
+            string jsonFilePath = Path.Combine(Application.StartupPath, "ChemistryQuiz.json");
+            if(File.Exists(jsonFilePath))
+            {
+                using (StreamReader reader = new StreamReader(jsonFilePath))
+                {
+                    reader.ReadToEnd();
+
+                }
             } else
             {
-                File.Create(THERMO_QUIZ).Close();
-
-                MessageBox.Show("Created");
+                MessageBox.Show("The Chemistry Quizzes have not loaded in.");
             }
-
         }
 
 
