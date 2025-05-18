@@ -1,0 +1,25 @@
+﻿{
+  "version": 0.1,
+  "quizId": 1,
+  "title": "Thermochemistry",
+  "totalPoints": 10,
+  "totalQuestions": 2,
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is the bond angle of H2O?",
+      "answer": "109.5",
+      "points": 1,
+      "type": "Multichoice",
+      "choices": [ "120", "180", "109.5", "117.5" ]
+    },
+    {
+      "id": 2,
+      "text": "Is the C-C bond polar?",
+      "answer": "False",
+      "points": 1,
+      "type": "True or False",
+      "choices": [ "True", "False" ]
+    }
+  ]
+}

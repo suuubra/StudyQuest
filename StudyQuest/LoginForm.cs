@@ -9,7 +9,7 @@ namespace StudyQuest
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            Home homeForm = new Home();
+            Dashboard homeForm = new Dashboard();
             homeForm.ShowDialog();
             this.Hide();
         }
