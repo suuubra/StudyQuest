@@ -79,6 +79,7 @@
             this.panelThermo.Name = "panelThermo";
             this.panelThermo.Size = new System.Drawing.Size(313, 163);
             this.panelThermo.TabIndex = 3;
+            this.panelThermo.Click += new System.EventHandler(this.panelThermo_Click);
             // 
             // labelThermo
             // 
@@ -160,7 +161,7 @@
             this.buttonImport.TabIndex = 7;
             this.buttonImport.Text = "Import";
             this.buttonImport.UseVisualStyleBackColor = false;
-            this.buttonImport.Click += new System.EventHandler(this.button1_Click);
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
             // 
             // listBoxQuizzes
             // 

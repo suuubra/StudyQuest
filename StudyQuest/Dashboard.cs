@@ -73,7 +73,11 @@ namespace StudyQuest
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+
+
+        private void buttonImport_Click(object sender, EventArgs e)
         {
             using (var dialog = new OpenFileDialog { Filter = "JSON Files|*.json" })
             {
@@ -99,6 +103,28 @@ namespace StudyQuest
                     }
                 }
             }
+        }
+
+        private void panelThermo_Click(object sender, EventArgs e)
+        {
+
+
+            var thermoQuiz = (dynamic)listBoxQuizzes.FindString("Thermochemistry");
+            if(thermoQuiz != null)
+            {
+                var thermoForm = new QuizForm(thermoQuiz.FilePath);
+                thermoForm.ShowDialog();
+                LoadAttempts();
+
+            } else
+            {
+                MessageBox.Show("Not found that quiz thermochemistry");
+            }
+            //This is hardcoded, needs to be updated to find question id of 1 which is thermochemistry.
+            //var thermoQuiz = 
+            //var thermoForm = new QuizForm(thermoQuiz.FilePath);
+            //thermoForm.ShowDialog();
+            //    LoadAttempts();
         }
     }
 }
