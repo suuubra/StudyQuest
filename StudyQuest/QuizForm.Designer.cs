@@ -28,70 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblQuestion = new Label();
-            panelAnswers = new Panel();
-            btnNext = new Button();
-            lblProgress = new Label();
-            progressBar = new ProgressBar();
-            SuspendLayout();
+            this.lblQuestion = new System.Windows.Forms.Label();
+            this.panelAnswers = new System.Windows.Forms.Panel();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.lblProgress = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.SuspendLayout();
             // 
             // lblQuestion
             // 
-            lblQuestion.AutoSize = true;
-            lblQuestion.Location = new Point(302, 66);
-            lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(55, 15);
-            lblQuestion.TabIndex = 0;
-            lblQuestion.Text = "Question";
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Location = new System.Drawing.Point(302, 66);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(55, 15);
+            this.lblQuestion.TabIndex = 0;
+            this.lblQuestion.Text = "Question";
             // 
             // panelAnswers
             // 
-            panelAnswers.Location = new Point(225, 143);
-            panelAnswers.Name = "panelAnswers";
-            panelAnswers.Size = new Size(200, 100);
-            panelAnswers.TabIndex = 1;
+            this.panelAnswers.Location = new System.Drawing.Point(225, 143);
+            this.panelAnswers.Name = "panelAnswers";
+            this.panelAnswers.Size = new System.Drawing.Size(200, 100);
+            this.panelAnswers.TabIndex = 1;
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(351, 271);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(75, 23);
-            btnNext.TabIndex = 2;
-            btnNext.Text = "Next";
-            btnNext.UseVisualStyleBackColor = true;
-            btnNext.Click += btnNext_Click;
+            this.btnNext.Location = new System.Drawing.Point(351, 271);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
             // 
             // lblProgress
             // 
-            lblProgress.AutoSize = true;
-            lblProgress.Location = new Point(232, 282);
-            lblProgress.Name = "lblProgress";
-            lblProgress.Size = new Size(55, 15);
-            lblProgress.TabIndex = 3;
-            lblProgress.Text = "Progress:";
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Location = new System.Drawing.Point(248, 253);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(55, 15);
+            this.lblProgress.TabIndex = 3;
+            this.lblProgress.Text = "Progress:";
             // 
             // progressBar
             // 
-            progressBar.Location = new Point(207, 300);
-            progressBar.Name = "progressBar";
-            progressBar.Size = new Size(100, 23);
-            progressBar.TabIndex = 4;
+            this.progressBar.Location = new System.Drawing.Point(225, 271);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(100, 23);
+            this.progressBar.TabIndex = 4;
             // 
             // QuizForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(progressBar);
-            Controls.Add(lblProgress);
-            Controls.Add(btnNext);
-            Controls.Add(panelAnswers);
-            Controls.Add(lblQuestion);
-            Name = "QuizForm";
-            Text = "QuizForm";
-            ResumeLayout(false);
-            PerformLayout();
-            this.Controls.AddRange(new Control[] { lblQuestion, panelAnswers, btnNext, lblProgress, progressBar });
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblQuestion);
+            this.Controls.Add(this.panelAnswers);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.lblProgress);
+            this.Controls.Add(this.progressBar);
+            this.Name = "QuizForm";
+            this.Text = "QuizForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -25,7 +25,7 @@ namespace StudyQuest
         {
             InitializeComponent();
             this.quizFilePath = quizFilePath;
-            this.Size = new System.Drawing.Size(1920, 1080);
+            this.Size = new System.Drawing.Size(800, 600);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.BackColor = Color.FromArgb(200, 220, 255);
             LoadQuiz();
@@ -96,7 +96,7 @@ namespace StudyQuest
 
         }
 
-          private   void SubmitQuiz()
+          private void SubmitQuiz()
             {
                 int score = 0;
                 int totalPoints = 0;
@@ -119,7 +119,7 @@ namespace StudyQuest
             {
                 var attempt = new
                 {
-                    UserId = CurrentUser.UserId, // Assume CurrentUser set after login
+                    UserId = 1, // Assume CurrentUser set after login
                     QuizId = quiz.QuizId,
                     QuizTitle = quiz.Title,
                     Score = score,

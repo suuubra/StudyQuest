@@ -58,6 +58,10 @@ namespace StudyQuest
                 }
             }
         }
+
+        // Select Quiz.
+
+
         private void listBoxQuizzes_DoubleClick(object sender, EventArgs e)
         {
             if (listBoxQuizzes.SelectedItem != null)
@@ -69,7 +73,7 @@ namespace StudyQuest
             }
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             using (var dialog = new OpenFileDialog { Filter = "JSON Files|*.json" })
             {
@@ -95,11 +99,6 @@ namespace StudyQuest
                     }
                 }
             }
-        }
-
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿{
   "version": 0.1,
-  "quizId": 1,
-  "title": "Thermochemistry",
-  "totalPoints": 3,
+  "quizId": 2,
+  "title": "Organic Chemistry",
+  "totalPoints": 10,
   "totalQuestions": 3,
   "questions": [
     {
@@ -15,9 +15,9 @@
     },
     {
       "id": 2,
-      "text": "Is the C-C bond polar?",
-      "answer": "False",
-      "points": 1,
+      "text": "Is Alkene more reactive than Alkane.",
+      "answer": "True",
+      "points": 3,
       "type": "True or False",
       "choices": [ "True", "False" ]
     },
@@ -31,17 +31,3 @@
     }
   ]
 }
-
-/*
-
-
-    {
-      "id": 3,
-      "text": "Electronegativity increases across a period",
-      "answer": "True",
-      "points": 1,
-      "type": "True or False",
-      "chocies": ["True","False"]
-    }
-
-*/
