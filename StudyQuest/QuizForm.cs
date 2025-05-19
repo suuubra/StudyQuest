@@ -74,27 +74,7 @@ namespace StudyQuest
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {quiz.Questions.Count}";
             progressBar.Value = (currentQuestionIndex + 1) * 100 / quiz.Questions.Count;
         }
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            var question = quiz.Questions[currentQuestionIndex];
-            var selectedRadio = panelAnswers.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-            if (selectedRadio == null)
-            {
-                MessageBox.Show("Please select an answer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            userAnswers[question.Id] = selectedRadio.Text;
-            currentQuestionIndex++;
-            if (currentQuestionIndex < quiz.Questions.Count)
-            {
-                DisplayQuestion();
-            }
-            else
-            {
-                SubmitQuiz();
-            }
 
-        }
 
           private void SubmitQuiz()
             {
@@ -110,7 +90,7 @@ namespace StudyQuest
                     totalPoints += question.Points;
                 }
                 SaveQuizAttempt(score);
-                MessageBox.Show($"Quiz completed! Your score: {score}/{totalPoints}", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Quiz completed! Your score: {score + 1}/{totalPoints}", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
 
@@ -132,6 +112,27 @@ namespace StudyQuest
                 attempts.Add(attempt);
                 File.WriteAllText("Stats.json", JsonConvert.SerializeObject(attempts, Formatting.Indented));
             }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            var question = quiz.Questions[currentQuestionIndex];
+            var selectedRadio = panelAnswers.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            if (selectedRadio == null)
+            {
+                MessageBox.Show("Please select an answer.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            userAnswers[question.Id] = selectedRadio.Text;
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quiz.Questions.Count)
+            {
+                DisplayQuestion();
+            }
+            else
+            {
+                SubmitQuiz();
+            }
         }
+    }
     }
 
